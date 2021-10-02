@@ -15,3 +15,13 @@ var MessageView = {
     `)
 
 };
+
+// campus: "hr-sfo"
+// created_at: "2021-10-02T02:28:18.363Z"
+// github_handle: "Thistleman"
+// message_id: 35115
+// roomname: null
+// text: "WOOOOOOOOOOOOO!!!!"
+// updated_at: "2021-10-02T02:28:18.363Z"
+// username: "Duncan Ragsdale"
+// [[Prototype]]: Object
