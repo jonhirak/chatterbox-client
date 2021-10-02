@@ -6,29 +6,35 @@ var Messages = {
 
   // TODO: Define how you want to store your messages.
   _data: [],
+  filtered: [],
 
   // TODO: Define methods which allow you to retrieve from,
   // add to, and generally interact with the messages.
   retrieve: function (username, roomname) {
-    var result = [];
+    var filtered = [];
 
-    for (var i = 0; i < Messages._data.length; i ++) {
-      var currentMessage = Messages._data[i];
+    if (aruguments.length === 0) {
+      return this._data;
+    } else {
+      for (var i = 0; i < this._data.length; i ++) {
+        var currentMessage = this._data[i];
 
-      if (currentMessage[username] === username) {
-        result.push(currentMessage);
+        if (currentMessage[username] === username) {
+          filtered.push(currentMessage);
+        }
+
+        if (currentMessage[roomname] === roomname) {
+          filtered.push(currentMessage);
+        }
+
+        return filtered;
       }
-
-      if (currentMessage[roomname] === roomname) {
-        result.push(currentMessage);
-      }
-
-      return result;
     }
   },
 
-  add: function (text) {
-    //FINISH THIS
-
+  addAllMessages: function () {
+    var string = 'hi';
+    this._data =
+    console.log('this._data:' + this._data);
   }
 };

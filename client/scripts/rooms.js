@@ -5,7 +5,9 @@
 var Rooms = {
 
   // TODO: Define how you want to store the list of rooms
-  _data: null,
+  _data: [],
+  roomsList: [],
+  currentRoom: null,
   // _data: ['testing'],
 
 
@@ -19,8 +21,24 @@ var Rooms = {
     room.name = roomName;
     room.members = members;
     room.addMembers = function (...members) {
-      this.members = this.memeber.concat(members);
+      this.members = this.memebers.concat(members);
     };
+
+    if (this._data.length > 0) {
+      var sorted = [];
+
+      // for (var i = 0; i < this._data.length; i ++) {
+      //   var current = this._data[i];
+
+      //   current.
+
+      // }
+    }
+
+    this._data.push(room);
+  },
+
+  select: function (roomName) {
 
   }
 

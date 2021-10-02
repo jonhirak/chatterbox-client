@@ -6,13 +6,15 @@ var MessageView = {
   // here: https://underscorejs.org/#template.
   // TODO: Update this template accordingly.
   render: _.template(`
-      <!--
       <div class="chat">
-        <div class="username"></div>
-        <div></div>
+        <div class="username"> <%- username %> </div>
+        <div> <%- message %> </div>
       </div>
-      -->
     `)
+
+//     var template = _.template("<b><%- value %></b>");
+//                    template({value: '<script>'});
+//                     =>    "<b>&lt;script&gt;</b>"
 
 };
 

@@ -19,11 +19,16 @@ var FormView = {
 
     console.log('click!');
 
+    var inputValue = document.getElementById('message').value;
+
     var message = {
       username: 'jonhirak',
-      text: 'GET FROM TEXT BOX',
-      roomname: null
+      text: inputValue,
+      // roomname: Rooms.currentRoom
+      roomname: RoomsView.$select.find(':selected').text()
     };
+
+    console.log('Rooms Info: ' + Rooms.currentRoom + Rooms.roomsList);
 
     Parse.create(message);
   },
@@ -32,5 +37,6 @@ var FormView = {
     var status = active ? 'true' : null;
     FormView.$form.find('input[type=submit]').attr('disabled', null);
   }
+
 
 };

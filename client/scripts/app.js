@@ -18,6 +18,9 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    setInterval(function () {
+      App.fetch();
+    }, 1000);
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
@@ -30,11 +33,14 @@ var App = {
 
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
+      Messages._data = data.slice();
+      Rooms._data = data.slice();
 
-      //loop over data
-      //for each item in data get text, roomname, username
-
+      MessagesView.initialize();
+      RoomsView.initialize();
     });
+
+    callback();
   },
 
   startSpinner: function() {
