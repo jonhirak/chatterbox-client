@@ -20,7 +20,7 @@ var App = {
     App.fetch(App.stopSpinner);
     setInterval(function () {
       App.fetch();
-    }, 1000);
+    }, 5000);
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.

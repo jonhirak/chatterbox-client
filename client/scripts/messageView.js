@@ -11,11 +11,6 @@ var MessageView = {
         <div> <%- message %> </div>
       </div>
     `)
-
-//     var template = _.template("<b><%- value %></b>");
-//                    template({value: '<script>'});
-//                     =>    "<b>&lt;script&gt;</b>"
-
 };
 
 // campus: "hr-sfo"
